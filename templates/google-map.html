@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+    
+    <div class="container">
+        <div class="google-map">
+            <form action="/map" class="myForm" method="POST">
+                <input type="text" class="form-control" name="map-address" placeholder="Enter you location" value="{{address_value}}">
+            </form>
+            <div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?q={{address}}%20hospital&t=k&z=13&ie=UTF8&iwloc=&output=embed"></iframe><a href="https://www.yellowrocketagency.com"></a></div></div>
+        </div>
+    </div>
+
+{% endblock content %}

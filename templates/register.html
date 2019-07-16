@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+
+<!-- Start Sign Up -->
+<div class="myForm">
+    <div class="container text-center">
+    <h2 class="h1">Sign Up</h2>
+    <form action="/register" method="POST">
+        {{ form.hidden_tag() }}
+        
+        {% if form.firstName.errors %}
+          {{ form.firstName(class="form-control is-invalid",placeholder='First Name') }}
+          <div class="invalid-feedback">
+            {% for error in form.firstName.errors %}
+              <span>{{error}}</span>
+            {% endfor %}
+          </div>
+        {% else %}
+          {{ form.firstName(class="form-control",placeholder='First Name') }}
+        {% endif %}
+
+        {% if form.lastName.errors %}
+        {{ form.lastName(class="form-control is-invalid",placeholder='Last Name') }}
+          <div class="invalid-feedback">
+            {% for error in form.lastName.errors %}
+              <span>{{error}}</span>
+            {% endfor %}
+          </div>
+        {% else %}
+          {{ form.lastName(class="form-control",placeholder='Last Name') }}
+        {% endif %}
+
+        {% if form.email.errors %}
+          {{ form.email(class="form-control is-invalid",placeholder='Email') }}
+          <div class="invalid-feedback">
+            {% for error in form.email.errors %}
+              <span>{{error}}</span>
+            {% endfor %}
+          </div>
+        {% else %}
+         {{ form.email(class="form-control",placeholder='Email') }}
+        {% endif %}
+
+        {{ form.gender(class="form-control") }}
+
+
+        {% if form.age.errors %}
+          {{ form.age(class="form-control is-invalid",placeholder='Age') }}
+          <div class="invalid-feedback">
+            {% for error in form.age.errors %}
+              <span>{{error}}</span>
+            {% endfor %}
+          </div>
+        {% else %}
+         {{ form.age(class="form-control",placeholder='Age') }}
+        {% endif %}
+
+        {{ form.acc_type(class="form-control") }}
+
+        <div id="doctorSpec">
+          {{form.specialization(class="form-control",placeholder="Doctor Specialization")}}
+        </div>
+        {% if form.password.errors %}
+        {{ form.password(class="form-control is-invalid",placeholder='Password') }}
+          <div class="invalid-feedback">
+            {% for error in form.password.errors %}
+              <span>{{error}}</span>
+            {% endfor %}
+          </div>
+        {% else %}
+        {{ form.password(class="form-control",placeholder='Password') }}
+        {% endif %}
+        
+        {% if form.confirm_password.errors %}
+        {{ form.confirm_password(class="form-control is-invalid",placeholder='Confirm Password') }}
+          <div class="invalid-feedback">
+            {% for error in form.confirm_password.errors %}
+              <span>{{error}}</span>
+            {% endfor %}
+          </div>
+        {% else %}
+        {{ form.confirm_password(class="form-control",placeholder='Confirm Password') }}
+        {% endif %}
+        
+        {{ form.submit(class="form-control mybtn",value='Sign Up') }}
+    </form>
+    <p class="lead">Are you influencer? Sign in <a href="/login">Here</a></p>
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,122 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<ul class="breadcrumb">
+    <li class="active"><a href="/home">Home</a></li>
+    <li class="active"><a href="/info">Info</a></li>
+    <li class="active"><a href="/symps">Symptoms</a></li>
+    <li class="active"><a href="/questions">Interview</a></li>
+    <li class="active"><a href="/diagnosis">Result</a></li>
+</ul>
+
+<div class="diag">
+  <div class="container">
+    
+    <div class="header">
+      <h3>May require medical attention</h3>
+      <ul>
+        <li>This System is for informational purposes only, and is not intended to constitute professional medical advice, diagnosis or treatment.</li>
+        <li>Consulting a medical professional soon is advised.</li>
+      </ul>
+    </div>
+
+      <div class="diagnosis">
+        <h3>Result</h3>
+        <p>Please note that the list below may not be complete and is provided solely for informational purposes and is not a qualified medical opinion.</p>
+        <h3>Based on you symptoms:</h3> {% for s in symptoms %} <span class="user-symps">{{s}}</span> {% endfor %}
+
+        <hr>
+        <div class="disease-info">
+          <p>Click any disease for details:</p>
+          
+          {% for d in diseases %}
+          <div class="disease">
+            <h4 class="iamDisease">{{d}}</h4>
+            {% if diseasesInfo[loop.index0] != false %}
+              <div class="diseses-data" >
+                  <i class='fa fa-close closeDis'></i>
+                <h3 class="dis-name">{{diseasesInfo[loop.index0][1]}}</h3>
+                <div class="dis-disc">
+                    <h4>Discreption:</h4>
+                    <p>{{diseasesInfo[loop.index0][2]}}</p>    
+                </div>
+                <hr>
+                <div class="dis-organ">
+                    <h4>Doctor specialized in {{diseasesInfo[loop.index0][4]}} is called: </h4><p>{{specialist[loop.index0]}}</p>
+                </div>
+                <hr>
+                <div class="dis-sym">
+                    <h4>Matched Symptoms: </h4>
+                    {% for ds in diseasesSyms[loop.index0] %}
+                      {% if ds in symptoms %}
+                        <p>- {{ds}}</p>
+                      {% endif %}
+                    {% endfor %}
+                </div>
+                <hr>
+                <div class="dis-deg">
+                    <h4>Degree of dangerous: </h4>
+                    {% if diseasesInfo[loop.index0][3] == 'H' %}
+                      <h5 style="color:#ff0000da;">High <span>(Prompt medical attention recommended)</span></h5>
+                    {% elif diseasesInfo[loop.index0][3] == 'M' %}
+                      <h5 style="color: #ff7700;">Medium <span>(Medical attention recommended)</span></h5>
+                    {% else %}
+                      <h5 style="color:#1ed200;">Low <span>(Medical attention not needed)</span></h5>
+                    {% endif %}
+                </div>
+                <hr>
+                <div class="dis-tips">
+                  <h4>Tips: </h4> <a href="{{diseasesTips[loop.index0]}}" target="_blank">Click me to get some tips about this disease.</a>
+                </div>
+              </div>
+              {% endif %}
+              {% if percent[loop.index0] > 60 %}
+              <h5 style="color:#ff0000da;">Strong evidence <span>({{percent[loop.index0]}}%)</span></h5>
+              {% elif percent[loop.index0] > 30 %}
+              <h5 style="color: #ff7700;">Moderate evidence <span>({{percent[loop.index0]}}%)</span></h5>
+              {% else %}
+              <h5 style="color:#1ed200;">Week evidence <span>({{percent[loop.index0]}}%)</span></h5>
+              {% endif %}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="google-map">
+        <h3>Find near hospitals</h3>
+          <form action="/map" class="myForm" method="POST">
+              <input type="text" class="form-control" name="map-address" placeholder="Enter you location" value="{{address_value}}">
+          </form>
+          <div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?q={{address}}%20hospital&t=k&z=13&ie=UTF8&iwloc=&output=embed"></iframe><a href="https://www.yellowrocketagency.com"></a></div></div>
+      </div>
+
+      <div class="header">
+        <h3>Give Feedback</h3>
+        <p>How would you rate the usefulness of this service?</p>
+        <form action="/feedback" method="POST">
+          <div class="rate">
+            <input type="radio" id="star5" name="rate" value="5" />
+            <label for="star5" title="5 stars">5 stars</label>
+            <input type="radio" id="star4" name="rate" value="4" />
+            <label for="star4" title="4 stars">4 stars</label>
+            <input type="radio" id="star3" name="rate" value="3" />
+            <label for="star3" title="3 stars">3 stars</label>
+            <input type="radio" id="star2" name="rate" value="2" />
+            <label for="star2" title="2 stars">2 stars</label>
+            <input type="radio" id="star1" name="rate" value="1" />
+            <label for="star1" title="1 stars">1 star</label>
+          </div>
+          <textarea name="feedback" id="feedback" class="form-control" cols="30" rows="8"></textarea>
+          <input type="submit" value="Send" class="btn btn-primary">
+        </form>
+      </div>
+
+      <div class="header">
+        <p>Please note that the information provided by this tool is provided solely for educational purposes and is not a qualified medical opinion. This information should not be considered advice or an opinion of a doctor or other health professional about your actual medical state, and you should see a doctor for any symptoms you may have. If you are experiencing a health emergency, you should call your local emergency number immediately to request emergency medical assistance.</p>
+      </div>
+
+  </div>
+</div>
+
+
+{% endblock content %}

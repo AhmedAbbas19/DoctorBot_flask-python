@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block content %}
+    
+    <div class="container">
+        <div class="header disease-search">
+          <h3 class="dis-name">{{diseaseName}}</h3>
+            <div class="dis-disc">
+                <h4>Discreption:</h4>
+                <p>{{diseasesInfo[2]}}</p>    
+            </div>
+            <hr>
+            <div class="dis-organ">
+                <h4>Doctor specialized in {{diseasesInfo[4]}} is called: </h4><p>{{specialist}}</p>
+            </div>
+            <hr>
+            <div class="dis-sym">
+                <h4>Disease Symptoms: </h4>
+                {% for ds in diseasesSyms %}
+                  <p>- {{ds}}</p>
+                {% endfor %}
+            </div>
+            <hr>
+            <div class="dis-deg">
+                <h4>Degree of dangerous: </h4>
+                {% if diseasesInfo[3] == 'H' %}
+                  <h5 style="color:#ff0000da;">High <span>(Prompt medical attention recommended)</span></h5>
+                {% elif diseasesInfo[3] == 'M' %}
+                  <h5 style="color: #ff7700;">Medium <span>(Medical attention recommended)</span></h5>
+                {% else %}
+                  <h5 style="color:#1ed200;">Low <span>(Medical attention not needed)</span></h5>
+                {% endif %}
+            </div>
+            <hr>
+            <div class="dis-tips">
+              <h4>Tips: </h4> <a href="{{diseasesTips}}" target="_blank">Click me to get some tips about this disease.</a>
+            </div>
+            
+        </div>
+    </div>
+
+{% endblock content %}

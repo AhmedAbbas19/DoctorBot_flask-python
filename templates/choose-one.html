@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<ul class="breadcrumb">
+    <li class="active"><a href="/home">Home</a></li>
+    <li class="active"><a href="/info">Info</a></li>
+    <li class="active"><a href="/symps">Symptoms</a></li>
+    <li class="active"><a href="/questions">Interview</a></li>
+    <li class="inactive">Result</li>
+</ul>
+
+
+<div class="questions">
+    <div class="container">
+        <div class="col-md-8">
+            <div class="ques">
+                <h3>Please tell us more</h3>
+                <p>Please check all the statements below that apply to you.</p>
+                <form autocomplete="off" action="{{url_for('chooseOne')}}" method="POST" class="form-group">
+
+                    <div class="question">
+                        <p>Which symptom you feel the most ?</p>
+                        <label class="wrapper">{{myQuestions1[0]}}
+                        <input type="radio" name="ans" value="1{{myQuestions1[0]}}">
+                        <span class="checkmark"></span>
+                        </label>
+
+                        <label class="wrapper">{{myQuestions2[0]}}
+                        <input type="radio" name="ans" value="2{{myQuestions2[0]}}">
+                        <span class="checkmark"></span>
+                        </label>
+                    </div> 
+                    
+                    <div class="note">
+                        <p>Note: {{myQuestions1[0]}} is related to {{myQuestions1[1]}}</p>
+                        <p>{{myQuestions2[0]}} is related to {{myQuestions2[1]}}</p>
+                    </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+                {% if symptoms|length > 0 %}
+            <div class="symptoms">        
+                    <h3>Your Complain</h3>
+                    {% for s in symptoms %}
+                        <!-- <div class="mySymps"> {{ s }} </div><br> -->
+                        <label class="mySymps">{{ s }}<input type="text" name="sym[]" value="{{s}}" hidden></label>
+                    {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+        <input type="submit" value="Continue" class="btn btn-primary" id="go-predict">
+    </form>
+    </div>  
+</div>
+
+{% endblock content %}

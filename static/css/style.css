@@ -1,0 +1,840 @@
+/* #96daff */
+a,a:active,a:hover{
+    text-decoration: inherit;
+    color: inherit;
+}
+label{
+    font-weight: normal;
+}
+body{
+    /* background-image: url('../images/d1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; */
+    /* background: #00a1c7; */
+    background: linear-gradient(to right, #16c5ad, #00a1c7);
+    line-height: 1.8;
+    overflow-x: hidden;
+    letter-spacing: 0.5px;
+}
+.btn-primary{
+    display: block;
+    margin: 35px auto;
+    background: #00a1c7;
+    border: unset;
+    color: #fff;
+    padding: 13px 72px;
+    font-size: 16px;
+    transition: all 0.7s;
+}
+.alert-danger {
+    color: #f5f5f5;
+    background-color: #ec5e5e;
+    border-color: #ffffff;
+}
+.alert-success {
+    color: #f5f5f5;
+    background-color: #75bf57;
+    border-color: #ffffff;
+}
+.nicescroll-cursors{
+    width: 8px !important;
+    background-color: rgb(0, 162, 199) !important;
+    border-radius: 0px !important;
+    border: none !important;
+  }
+/*   Breadcrumb
+----------------------------------------------------------------*/
+.breadcrumb{
+    background: unset;
+    padding: 0 0 25px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+.breadcrumb .active{
+    color: #fff;
+}
+.breadcrumb .inactive{
+    color: #d2d2d2;
+    user-select: none;
+}
+.error-alerts{
+    margin-top: 80px;
+}
+/*Log In HTML Page Style*/
+
+.myForm{
+    font-family: 'Roboto', sans-serif;
+}
+
+.myForm .h1{
+    margin: 45px 0 30px 0;
+    color: #fff;
+}
+
+.myForm .form-control {
+    margin: 0 10px 10px 0;
+    display: initial;
+    height: 40px;
+    color: #000;
+    border-radius: 0;
+    box-shadow: none;
+    border: 1px solid #888;
+    font-family: 'Abel', sans-serif;
+}
+.myForm .form-control:-moz-placeholder{
+    color: #999;
+}
+.myForm .is-invalid{
+    border: 1px solid #e46363;
+}
+.myForm .invalid-feedback{
+    margin-top: 0;
+    margin-bottom: 15px;
+    line-height: 1;
+    color: #e46363;
+}
+
+  .myForm .mybtn {
+    background: #fff;
+    color: #00a1c7;
+    border: none;
+  }
+  
+  .myForm form {
+    width: 60%;
+    margin: auto;
+  }
+
+  #doctorSpec{
+      display: none;
+  }
+/* Navbar Style */
+@media (min-width: 768px){
+    /* .navbar-nav {
+        float: unset;
+        margin: 0 auto;
+        display: table;
+    } */
+    .navbar-nav > li > a {
+        padding: 15px 25px;
+    }
+}
+.navbar{
+    border: none;
+    border-radius: 0;
+    -webkit-transition: all 0.8s ease;
+    -moz-transition: all 0.8s ease;
+    -o-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+}
+.navbar-default {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 7px #505050;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #00a1c7;
+    transition: 0.7s all;
+    letter-spacing: 1px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #ffffff;
+    background-color: #00a1c7;
+}
+.navbar-brand{
+    font-family: 'Damion', cursive;
+    color: #00a1c7 !important;
+    font-size: 26px;
+}
+.navbar-brand span{
+    background: #00a1c7;
+    color: #ffffff;
+    padding: 1px 10px 0 6px;
+    border-radius: 4px;
+    font-size: 21px;
+}
+.dropdown-menu{
+    background: #fff;
+    color: #00a1c7;
+    font-family: 'Roboto', sans-serif;
+}
+a.dropdown-item {
+    display: block;
+    padding: 5px 10px;
+    transition: all 0.5s;
+    letter-spacing: 0.7px;
+    color: #00a1c7;
+}
+a.dropdown-item:hover {
+    background: #00a1c7;
+    color: #fff;
+}
+.dropdown-divider{
+    background: #017f9c;
+    height: 1px;
+    opacity: 0.2;
+}
+
+.navbar-default .navbar-toggle{
+    border: none;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
+    background: none;
+}
+.navbar-default .navbar-toggle .icon-bar{
+    background: #00a1c7;
+}
+/* Header Style */
+.header{
+    font-family: 'Roboto', sans-serif;
+    background: #fff;
+    padding: 25px;
+    border-radius: 6px;
+    margin-bottom: 32px;
+    box-shadow: 0 1px 3px 0 rgba(123,139,165,0.2);
+}
+.header p{
+    font-size: 16px;
+    color: #828282;
+    margin-top: 22px;
+}
+.header h3{
+    margin-top: 32px;
+}
+.header span{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #00a1c7;
+}
+.header ul li{
+    color: #9e9e9e;
+}
+
+@media (max-width: 767px){
+    .welcome-doctor{
+        display: none;
+    }
+}
+
+.search-header .myForm{
+    position: relative;
+}
+.search-header i{
+    position: absolute;
+    top: 15px;
+    font-size: 16px;
+    left: 8px;
+    color: #00a1c7;
+}
+.search-header .form-control{
+    padding: 0 31px;
+    border: unset;
+    box-shadow: 3px 3px 2px #f7f7f7;
+}
+/* Info Style */
+
+.info .age,
+.info .hight,.info .weight{
+    display: inline-block;
+    margin-right: 35px;
+}
+.info .age{
+    text-align: center;
+    margin: auto;
+    display: none;
+}
+.info .age span{
+    font-size: 24px;
+    font-weight: bold;
+    color: #00a1c7;
+}
+#info-submit{
+    display: none;
+}
+.info .age .slider {
+    -webkit-appearance: none;
+    height: 3px;
+    background: #d3d3d3;
+    outline: none;
+    max-width: 50%;
+    margin: 32px auto;
+  }
+  .info .age .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 30px;
+    background: #00a1c7;
+    cursor: pointer;
+  }
+  .info .age .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #00a1c7;
+    cursor: pointer;
+  }
+.info .gender{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.info .form-control{
+    padding: 0px 15px;
+    border-radius: 5px;
+    width: 95px;
+    height: 41px;
+    font-size: 18px;
+}
+
+.info .age ,.info .gender{
+    background: #fff;
+    padding: 80px 0;
+    border-radius: 6px;
+    min-height: 400px;
+}
+
+#nxt-info,#info-submit{
+    background: #ffffff;
+    color: #00a1c7;
+    transition: all 0.7s;
+}
+#nxt-info:hover,#info-submit:hover{
+    background: #00a1c7;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+/* The wrapper */
+.info .wrapper {
+    margin: 20px 20px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .info .wrapper img{
+    max-width: 140px;
+    vertical-align: middle;
+    border: 1px solid #d0d0d0;
+    padding: 8px;
+  }
+  
+/* Hide the browser's default radio button */
+.info .wrapper input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+}
+
+
+/* On mouse-over, add a grey background color */
+.info .wrapper:hover input ~ .checkmark {
+    background: aliceblue;
+    border: 1px solid #00a1c7;
+}
+
+/* When the radio button is checked, add a blue background */
+.info .wrapper input:checked ~ .checkmark {
+    background-color: #ffffff;
+    border: 1px solid #00a1c7;
+    box-shadow: 0px 0px 6px #00a1c7;
+}
+
+/* Symptoms Page */
+/*the container must be positioned relative:*/
+
+area:hover{
+    background: black;
+    opacity: 0.5;
+}
+
+.symps .symps-form{
+    font-family: 'Roboto', sans-serif;
+    background: #fff;
+    padding: 25px 25px 0 25px;
+    border-radius: 6px;
+    min-height: 300px;
+    margin-bottom: 32px;
+    box-shadow: 0 1px 3px 0 rgba(123,139,165,0.2);
+}
+/* .symps .symps-input,
+.symps .symps-submit{
+    display: inline-block;
+} */
+.symps .symps-input img{
+    max-width: 50%;
+    margin: 25px auto;
+    display: block;
+}
+.symps .human-body{
+    position: relative;
+}
+.symps .human-body .svg-img{
+    position: absolute;
+    top: -25px;
+    left: 75px;
+}
+.symps .symps-submit{
+    float: right;
+}
+.symps form{
+    display: table;
+    margin: auto;  
+    max-width: 150px;
+}
+
+.symps input[type=text] {
+    width: 100%;
+    border: 1px solid #b7b7b7;
+    padding: 10px;
+    font-size: 16px;
+}
+.symps .btn-primary{
+    margin: 0;
+}
+  
+  .symps .addBtn {
+    background-color: #00a1c7;
+    color: #fff;
+    border: unset;
+    padding: 4px 14px;
+    font-size: 11px;
+    cursor: pointer;
+    position: absolute;
+    border-radius: 7%;
+    top: -3px;
+    right: 10px;
+  }
+  
+  .symps .addedSysmp{
+    display: inline-block;
+    background: #00a1c7;
+    color: #fff;
+    padding: 5px 12px;
+    margin: 10px 10px 0 0;
+    position: relative;
+  }
+
+  .symps i{
+    position: absolute;
+    top: -5px;
+    right: -3px;
+    color: #fff;
+    background: #2f2f2f;
+    padding: 2px 2px;
+    font-size: 11px;
+    cursor: pointer;
+  }
+
+  .symps .myDropdown{
+    border: 1px solid #bdbdbd;
+    background: #fff;
+    position: absolute;
+    opacity: 0.87;
+    top: 51px;
+    left: 15px;
+    min-width: 93%;
+    overflow-y: scroll;
+    max-height: 85%;
+    z-index: 999;
+  }
+  .symps .myDropdown hr{
+      margin: 5px;
+  }
+  .symps .dropdown-item{
+    margin-top: 10px;
+    padding-left: 10px;
+    position: relative;
+    border-bottom: 1px solid #dedede;
+  }
+
+  /* Body Model Suggestions */
+#organDropdown{
+    border-radius: 3px;
+    left: 230px;   
+    z-index: 999;
+    display: none;
+    box-shadow: 0 1px 3px 0 rgba(123,139,165,0.2);
+}
+
+@media (max-width:767px){
+    #organDropdown{
+        left: 5px;
+    }
+    .symps .symps-submit{
+        float: none;
+        margin-bottom: 20px;
+    }
+}
+.organ-title {
+    background: #ececec;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.organ-title i{
+    top: 8px;
+    right: 13px;
+    color: #808080;
+    font-size: 16px;
+    background: transparent;
+}
+  /* Questions page style */
+
+.ques{
+    font-family: 'Roboto', sans-serif;
+    background: #fff;
+    padding: 10px 25px;
+    border-radius: 5px;
+    max-height: 454px;
+    overflow-y: scroll;
+}
+.questions .symptoms{
+    background: #fff;
+    padding: 10px 25px 25px;
+    border-radius: 5px;
+    margin-bottom: 32px;
+}
+@media (min-width: 1200px){
+    .questions .container {
+        width: 1170px;
+    }
+}
+  .questions h3{
+    color: #00a1c7;
+  }
+  .ques> p{
+    color: #bdbdbd;
+  }
+
+.ques .question{
+    font-size: 18px;
+}
+.ques .form-group{
+    margin-top: 30px;
+}
+.ques hr{
+    margin: 10px 0 15px 0;
+}
+.ques .question p{
+    margin: 0;
+    display: inline-block;
+    margin-right: 35px;
+}
+
+.ques .question .wrapper{
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 15px;
+    margin-right: 20px;
+    padding-left: 25px;
+    float: right;
+}
+
+@media (max-width:767px){
+    .ques .question .wrapper{
+        float: none;
+        display: block;
+    }
+    .ques .question p{
+        display: block;
+    }
+    .questions .symptoms{
+        margin: 32px 0;
+    }
+}
+.ques .question .wrapper input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    }
+.ques .question .checkmark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    border-radius: 70%;
+    background-color: #dcdcdc;
+}
+
+#go-predict{
+    background: #ffffff;
+    color: #00a1c7;
+    transition: all 0.7s;
+}
+#go-predict:hover{
+    background: #00a1c7;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+/* On mouse-over, add a grey background color */
+.wrapper:hover input ~ .checkmark {
+background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.wrapper input:checked ~ .checkmark {
+background-color: #00a1c7;
+}
+.ques .question .wrapper .checkmark:after{
+    position: absolute;
+    display: none;
+    top: 6px;
+    left: 6px;
+    width: 6px;
+    height: 6px;
+}
+
+.symptoms .mySymps{
+    display: inline-block;
+    background: #00a1c7;
+    color: #fff;
+    padding: 5px 12px;
+    margin: 10px 10px 0 0;
+}
+
+.ques .btn-primary{
+    margin-left: 0; 
+}
+.ques .note{
+    margin-top: 32px;
+    color: #a7a7a7;
+}
+.ques .note p{
+    margin-bottom: 0;
+}
+/* Diagnosis Page Style */
+
+@media (min-width: 1200px){
+    .container {
+        width: 870px;
+    }
+}
+
+.diag h3{
+    font-size: 22px;
+    color: #000;
+    font-weight: bold;
+}
+.diagnosis{
+    font-family: 'Roboto', sans-serif;
+    background: #fff;
+    padding: 25px;
+    border-radius: 6px;
+    margin-top: 30px; 
+    margin-bottom: 32px;
+    box-shadow: 0 1px 3px 0 rgba(123,139,165,0.2);
+}
+.diagnosis p{
+    color: #6f6f6f;
+}
+.diagnosis .disease-info h2{
+    font-weight: bold;
+}
+
+.disease-info .diseses-data{
+    position: absolute;
+    background: #f0fffd;
+    top: 0px;
+    right: -2500px;
+    max-width: 767px;
+    min-height: 100%;
+    padding: 32px;
+    box-shadow: 12px 0px 17px #d2d2d2;
+    transition: all 0.6s;
+    z-index: 9999;
+}
+@media (max-width: 767px){
+    .disease-info .diseses-data{
+        width: 100%;
+    }
+}
+.iamDisease{
+    cursor: pointer;
+}
+.disease-info .dis-name{
+    margin-bottom: 32px;
+    font-size: 30px;
+}
+.diseses-data h4{
+    font-weight: bold;
+}
+.dis-tips a{
+    color:#5386ff;
+}
+i.fa.fa-close.closeDis {
+    float: right;
+    border: 1px solid #a2a2a2;
+    padding: 10px;
+    cursor: pointer;
+}
+.disease-info .disease {
+    margin-bottom: 22px;
+    /* background: #f9f9f9;
+    padding: 10px 10px;
+    border-radius: 5px; */
+}
+
+.diagnosis span.user-symps {
+    background: #f9f9f9;
+    color: #616161;
+    padding: 3px 10px;
+    border-radius: 2px;
+}
+
+  /* Google Map Style */
+
+  .google-map{
+    background: #fff;
+    padding: 25px;
+    border-radius: 5px;
+    margin-bottom: 32px;
+    box-shadow: 0 1px 3px 0 rgba(123,139,165,0.2);
+  }
+  .mapouter{
+      margin: auto;
+  }
+  .google-map .form-control,.search-disease{
+    width: 50%;
+    border: 1px solid #d4d4d4;
+    border-radius: 3px;
+}
+@media (max-width: 767px){
+    .google-map .form-control{
+        width: 100%;
+    }
+}
+
+/* Rate Stars */
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+    margin: -20px 0 10px 0;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #e4ba22;
+}
+
+
+/* Add Disease Page */
+.addDisease textarea{
+    height: auto !important;
+}
+.addDisSym {
+    float: right;
+    border: 1px solid #bfbfbf;
+    padding: 3px 10px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+.addDisSym i{
+    color: #00a1c7;
+}
+.alertMSG{
+    display: none;
+    background: #ff6d6d;
+    color: #f3f3f3;
+    padding: 10px 20px;
+    border-radius: 3px;
+    margin-bottom: 15px;
+}
+/* Edit profile */
+.edit-profile .mybtn{
+    background: #00a1c7;
+    color: #fff;
+}
+
+/* Doctor Contacts */
+
+.doctor-info{
+    background: #fbfbfb;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border: 1px solid #f5f5f5;
+    box-shadow: 2px 2px 3px #ececec;
+}
+.doctor-info h4{
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #585858;
+    font-family: 'Oswald' , sans-serif;
+}
+.doctor-info p{
+    margin: 0;
+    letter-spacing: 0.7px;
+}
+.btn-contact{
+    margin: 12px 0;
+    padding: 10px 25px;
+    font-size: 16px;
+    display: inline-block;
+}
+/* Disease Search */
+.disease-search .dis-name{
+    font-weight: bold;
+    font-size: 28px;
+}
+.disease-search h4{
+    font-weight: bold;
+    margin-top: 32px;
+    margin-bottom: 0px;
+}
+
+.disease-search p{
+    margin-top: 15px;
+}
+.disease-search .dis-sym p{
+    margin: 2px 0;
+}
+.disease-search .dis-sym h4{
+    margin-bottom: 15px;
+}
+
+.disease-search .dis-deg span {
+    color: inherit;
+    font-weight: inherit;
+    text-transform: inherit;
+}

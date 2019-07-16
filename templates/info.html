@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+{% block content %}
+    
+        <ul class="breadcrumb">
+            <li class="active"><a href="/home">Home</a></li>
+            <li class="active"><a href="/info">Info</a></li>
+            <li class="inactive">Symptoms</li>
+            <li class="inactive">Interview</li>
+            <li class="inactive">Result</li>
+        </ul>
+      
+      
+      <div class="info">
+          <div class="container">
+              
+                  <form action="/symps" method="POST">
+                      <div class="age form-group">
+                            <h3>Please select your age</h3>
+                            <input type="range" min="18" max="100" value="59" class="slider" id="myRange" name="age">
+                            <span id="age-value">59</span>
+                            <!-- <input type="text" class="form-control" name="age" placeholder="Age"> -->
+                      </div>
+                      <!-- <div class="hight form-group">
+                          
+                          <input type="text" class="form-control" name="hight" placeholder="Hight">
+                      </div>
+                      <div class="weight form-group">
+                          
+                          <input type="text" class="form-control" name="weight" placeholder="wieght">
+                      </div> -->
+                      
+                      <div class="gender form-group">
+                          <h3>Please select your gender</h3>
+                            <label class="wrapper">
+                                <input type="radio" name="gender" value="female">
+                                <img class="checkmark" src="{{ url_for('static', filename='images/woman-profile.png') }}" alt="">
+                                <span></span>
+                            </label>  
+                        
+                            <label class="wrapper">
+                                <input type="radio" name="gender" value="male">
+                                <img class="checkmark" src="{{ url_for('static', filename='images/man-profile.png') }}" alt="">
+                                <span></span>
+                            </label>
+                          
+                      </div>
+      
+                      <input type="submit" value="Continue" class="btn btn-primary" id="info-submit">
+                  </form>
+                  <button class="btn btn-primary" id="nxt-info">Next</button>
+          </div>
+      </div>
+{% endblock content %}

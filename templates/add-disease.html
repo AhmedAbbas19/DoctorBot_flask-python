@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="container">
+    <div class="header addDisease">
+        <h3>Add New Disease</h3>
+        <div class="alertMSG danger">
+            All fields are required!
+        </div>
+        <form action="/add-disease" class="myForm" method="POST">
+            <div class="addDisSym">
+                <i class="fa fa-plus"></i>
+                <span>Add Symptom</span>
+            </div>
+            <input type="text" name="dName" placeholder="Disease Name" class="form-control" required>
+            <textarea name="dDefinition" id="" cols="30" rows="3" class="form-control" placeholder="Disease Definition" required></textarea>
+            <select name="organ" id="" class="form-control" required>
+                <option value="" disabled selected>Disease Organ</option>
+                {% for o in organs %}
+                    <option value="{{o[0]}}">{{o[0]}}</option>
+                {% endfor %}
+            </select>
+            <select name="degree" id="" class="form-control" required>
+                <option value="" disabled selected>Disease degree of dangerous</option>
+                <option value="H">H</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+            </select>
+            <input type="text" name="tips" placeholder="Enter link for disease tips" class="form-control" required>
+            <input type="text" name="dSym[]" placeholder="Enter Symptom" class="form-control" required>
+            <input type="submit" value="ADD" class="btn btn-primary" id="addDis-submit">
+        </form>
+    </div>
+</div>
+
+{% endblock content %}

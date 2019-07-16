@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block content %}
+    
+    <ul class="breadcrumb">
+        <li class="active"><a href="/home">Home</a></li>
+        <li class="inactive">Info</li>
+        <li class="inactive">Symptoms</li>
+        <li class="inactive">Interview</li>
+        <li class="inactive">Result</li>
+    </ul>
+
+
+    <div class="info">
+        <div class="container">
+            <div class="header">
+                <div class="row">
+                    <div class="col-sm-8">
+                            <h3>Welcome to <span>Doctor Bot </span></h3>
+                            <p>You’re about to use a short (3 min), safe and anonymous health checkup. Your answers will be carefully analyzed and you’ll learn about possible causes of your symptoms.</p>            
+                    </div>
+                    <div class="col-sm-4 welcome-doctor">
+                        <img src="{{ url_for('static', filename='images/doctor-m.png') }}" alt="doctor">
+                    </div>
+                </div>
+                <hr>
+                <button class="btn btn-primary">
+                    {% if session['email'] %}
+                    <a href="/symps">Next</a>
+                    {% else %}
+                    <a href="/info">Next</a>
+                    {% endif %}
+                </button>
+            </div>
+        </div>
+    </div>
+
+      {% endblock content %}
